@@ -183,7 +183,7 @@ export default function PDFViewer({ url }: PDFViewerProps) {
 
       {/* PDF iframe */}
       <iframe
-        src={url + '#toolbar=1&navpanes=0&scrollbar=1&page=1&zoom=100'}
+        src={url + `?t=${Date.now()}#toolbar=1&navpanes=0&scrollbar=1&page=1&zoom=100`}
         className={`w-full border-0 ${isFullscreen ? 'h-[calc(100vh-60px)]' : 'h-[calc(100vh-160px)]'}`}
         onLoad={handleLoad}
         onError={handleError}
